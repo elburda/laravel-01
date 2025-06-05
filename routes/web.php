@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Auth;
-
+use App\Http\Controllers\Admin\NovedadController;
 
 // Rutas públicas
 Route::get('/listado/planes-servicios', [PublicController::class, 'index'])
@@ -11,6 +11,10 @@ Route::get('/listado/planes-servicios', [PublicController::class, 'index'])
 
 Route::get('/planes/{id}', [PublicController::class, 'show'])
 ->name('public.show');
+
+
+Route::get('/novedades/{novedad}', [NovedadController::class, 'show'])
+    ->name('novedades.show');
 
 
 
@@ -46,9 +50,6 @@ Route::get('/abm/planes-servicios',
 ->name('abm.planes.servicios')
 ->middleware('auth');
 
-
-
-
 Route::get('/inventario/agregar',
 [\App\Http\Controllers\InventarioController::class, 'create'])
 ->name('inventario.crear')
@@ -58,9 +59,6 @@ Route::post('/inventario/agregar',
 [\App\Http\Controllers\InventarioController::class, 'store'])
 ->name('inventario.store')
 ->middleware('auth');
-
-
-
 
 Route::get('/inventario/{id}/eliminar',
 [\App\Http\Controllers\InventarioController::class, 'delete'])
@@ -72,8 +70,6 @@ Route::post('/inventario/{id}/eliminar',
 ->name('inventario.destroy')
 ->middleware('auth');
 
-
-
 Route::get('/inventario/{id}/editar',
 [\App\Http\Controllers\InventarioController::class, 'edit'])
 ->name('inventario.edit')
@@ -84,11 +80,44 @@ Route::post('/inventario/{id}/editar',
 ->name('inventario.update')
 ->middleware('auth');
 
-
-
-
 Route::get('/inventario/{id}',
 [\App\Http\Controllers\InventarioController::class, 'show'])
 ->name('inventario.ver');
 
+/************NOVEDADES**********/
+
+
+Route::get('/admin/novedades', [\App\Http\Controllers\Admin\NovedadController::class, 'index'])
+    ->name('admin.novedades.index')
+    ->middleware('auth');
+
+
+Route::get('/admin/novedades/create', [\App\Http\Controllers\Admin\NovedadController::class, 'create'])
+    ->name('admin.novedades.create')
+    ->middleware('auth');
+
+
+Route::post('/admin/novedades', [\App\Http\Controllers\Admin\NovedadController::class, 'store'])
+    ->name('admin.novedades.store')
+    ->middleware('auth');
+
+
+Route::get('/admin/novedades/{novedad}/edit', [\App\Http\Controllers\Admin\NovedadController::class, 'edit'])
+    ->name('admin.novedades.edit')
+    ->middleware('auth');
+
+
+Route::put('/admin/novedades/{novedad}', [\App\Http\Controllers\Admin\NovedadController::class, 'update'])
+    ->name('admin.novedades.update')
+    ->middleware('auth');
+
+
+Route::delete('/admin/novedades/{novedad}', [\App\Http\Controllers\Admin\NovedadController::class, 'destroy'])
+    ->name('admin.novedades.destroy')
+    ->middleware('auth');
+
+
+Route::get('/admin/novedades/{novedad}', [\App\Http\Controllers\Admin\NovedadController::class, 'show'])
+    ->name('admin.novedades.show')
+    ->middleware('auth');
 

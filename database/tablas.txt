@@ -1,0 +1,81 @@
+# usuarios
+- usuario_cliente_id                        PRIMARY BIGINT UNSIGNED NOT NULL AUTOINCREMENT
+- Fecha Creacion            DATE
+- Fecha Actualizacion       DATE
+- nombre                    varchar(100)
+- apellido                  
+- empresa_id                
+- sector_id                 
+- procesador                
+- Memoria                   
+- Disco                     
+- Cover S.O.                VARCHAR(255)
+- Sistema Operativo         VARCHAR(255)
+- IP Pc                     
+- MacAdress                 
+- Rustdesk                  
+- Interno                   
+- IP Interno      
+- Detalle                   TEXT          
+
+# sectores
+
+# usuarios_admin
+- id
+
+# planes
+- id
+- nombre
+- precio
+
+# empresas_contrataciones
+- id
+- empresa_id
+- plan_id
+- fecha_contratacion
+- horas_utilizadas
+
+# empresas
+- id
+- nombre
+- plan_id
+
+
+- admin red
+- usuario (resumen)
+
+----
+
+2 Vistas
+
+Admin:
+- ABM de Usuarios / Equipos / Internos SIP (Telefonia)
+- Asignar Planes/Horas
+- Conexion Remota a Usuarios
+
+
+Usuario:
+- Fecha y Hora actual
+- Resumen de Hard y Soft de su PC
+- Plan asignado / Horas
+- Horas consumidas / Horas restantes
+- Chat
+- Listado de Usuarios (Empresa / Sector / Interno Telefono)
+
+----
+
+usuario_id              id
+nombre                  string-100
+apellido                string-100
+fecha_creacion          date
+fecha_actualizacion     now()
+equipo                  string-100
+procesador              string-100
+memoria
+disco
+sistema_operativo
+cover_so
+ip
+rustdesk
+interno
+ip_interno

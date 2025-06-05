@@ -1,0 +1,1 @@
+<a class="text-white nav-link {{ request()->is($url) ? 'active' : null }}" {!! request()->is($url) ? 'aria-current="page"' : null !!} href="{{ url($url) }}">{{ $slot }}</a>

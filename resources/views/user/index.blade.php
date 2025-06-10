@@ -14,9 +14,6 @@
         @foreach($planes as $plan)
         <div class="col">
             <div class="card h-100 shadow-sm">
-                <!-- Imagen dummy -->
-                {{-- <img src="https://via.placeholder.com/400x200?text=Servicio+IT" class="card-img-top rounded-top" alt="Imagen de servicio"> --}}
-
                 <div class="card-body d-flex flex-column">
                     <h5 class="card-title mb-3">
                         <i class="bi bi-box-seam"></i> {{ $plan->titulo }}

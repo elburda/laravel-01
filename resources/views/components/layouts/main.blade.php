@@ -39,7 +39,11 @@
                 <li class="nav-item">
                     <x-nav-link url="/abm/planes-servicios">ABM-Planes/Servicios</x-nav-link>
                 </li>
-                <!-- Agrega más items aquí si hace falta -->
+                <li class="nav-item">
+                    <x-nav-link url="/abm/novedades">ABM-Novedades</x-nav-link>
+                </li>
+
+
             </ul>
         </nav>
 

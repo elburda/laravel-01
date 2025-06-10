@@ -29,6 +29,9 @@
                     <li class="nav-item">
                         <x-nav-link url="/listado/planes-servicios" class="text-white">Planes/Servicios</x-nav-link>
                     </li>
+                    <li class="nav-item">
+                        <x-nav-link url="/novedades" class="text-white">Novedades</x-nav-link>
+                    </li>
                     @auth
                         <li class="nav-item">
                             <form action="{{ route('auth.logout') }}" method="POST">

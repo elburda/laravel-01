@@ -20,11 +20,13 @@ class InventarioController extends Controller
         ]);
     }
 
-    public function show(int $id)
+    public function show($id)
     {
         // $planes = Plan::all();
         // dd($planes);
-
+        if (!is_numeric($id)) {
+            abort(404, "El ID proporcionado no es válido.");
+        }
         // return view('listados.index');
 
         $plan = Plan::findOrFail($id);

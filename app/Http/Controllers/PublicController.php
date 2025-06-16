@@ -12,7 +12,7 @@ class PublicController extends Controller
     {
         $planes = Plan::all();
 
-        return view('user.index', [
+        return view('visitantes.index', [
             'planes' => $planes,
         ]);
     }
@@ -21,7 +21,7 @@ class PublicController extends Controller
     {
         $plan = Plan::findOrFail($id);
 
-        return view('user.ver', [
+        return view('visitantes.ver', [
             'plan' => $plan,
         ]);
     }

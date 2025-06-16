@@ -7,7 +7,7 @@
         <div class="mb-4 text-danger">Por favor, revisá el formulario para continuar.</div>
     @endif
 
-    <form action="{{ route('novedades.update', ['id' => $novedad->id]) }}" method="post">
+    <form action="{{ route('abm.novedades.update', ['id' => $novedad->id]) }}" method="post">
         @csrf
         <div class="mb-3">
             <label for="titulo" class="form-label">Título</label>
@@ -49,6 +49,9 @@
             @enderror
         </div>
 
-        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <div class="d-flex justify-content-between mt-4">
+            <a href="{{ route('abm.novedades') }}" class="btn btn-secondary">Volver</a>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </div>
     </form>
 </x-layouts.main>

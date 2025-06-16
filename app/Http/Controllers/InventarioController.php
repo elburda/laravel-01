@@ -48,21 +48,20 @@ class InventarioController extends Controller
     {
         
         //Validacion//
-
         $request->validate([
-            'titulo' => 'required|min:2',
+            'titulo'  => 'required|min:2',
             'resumen' => 'required|min:2',
-            'precio' => 'required|numeric',
-            'horas' => 'required|numeric',
+            'precio'  => 'required|numeric',
+            'horas'   => 'required|numeric',
         ], [
-            'titulo.required' => 'El título debe tener un valor.',
-            'titulo.min' => 'El título debe tener :min caracteres o más.',
+            'titulo.required'  => 'El título debe tener un valor.',
+            'titulo.min'       => 'El título debe tener :min caracteres o más.',
             'resumen.required' => 'El resumen debe tener un valor.',
-            'resumen.min' => 'El resumen debe tener :min caracteres o más.',
-            'precio.required' => 'El precio debe tener un valor.',
-            'precio.numeric' => 'El precio debe ser un valor numérico.',
-            'horas.required' => 'Las horas deben tener un valor.',
-            'horas.numeric' => 'Las horas deben ser un valor numérico.',
+            'resumen.min'      => 'El resumen debe tener :min caracteres o más.',
+            'precio.required'  => 'El precio debe tener un valor.',
+            'precio.numeric'   => 'El precio debe ser un valor numérico.',
+            'horas.required'   => 'Las horas deben tener un valor.',
+            'horas.numeric'    => 'Las horas deben ser un valor numérico.',
         ]);
 
         $data = $request->only(['titulo', 'resumen', 'precio','horas', 'demanda_fk']);
@@ -79,7 +78,7 @@ class InventarioController extends Controller
     public function edit(int $id)
     {
         return view('listados.form-edit', [
-            'plan' => Plan::findOrFail($id),
+            'plan'     => Plan::findOrFail($id),
             'demandas' => Demanda::all(),
         ]);
     }
@@ -87,19 +86,19 @@ class InventarioController extends Controller
     public function update(Request $request, int $id)
     {
         $request->validate([
-            'titulo' => 'required|min:2',
+            'titulo'  => 'required|min:2',
             'resumen' => 'required|min:2',
-            'precio' => 'required|numeric',
-            'horas' => 'required|numeric',
+            'precio'  => 'required|numeric',
+            'horas'   => 'required|numeric',
         ], [
-            'titulo.required' => 'El título debe tener un valor.',
-            'titulo.min' => 'El título debe tener :min caracteres o más.',
+            'titulo.required'  => 'El título debe tener un valor.',
+            'titulo.min'       => 'El título debe tener :min caracteres o más.',
             'resumen.required' => 'El resumen debe tener un valor.',
-            'resumen.min' => 'El resumen debe tener :min caracteres o más.',
-            'precio.required' => 'El precio debe tener un valor.',
-            'precio.numeric' => 'El precio debe ser un valor numérico.',
-            'horas.required' => 'Las horas deben tener un valor.',
-            'horas.numeric' => 'Las horas deben ser un valor numérico.',
+            'resumen.min'      => 'El resumen debe tener :min caracteres o más.',
+            'precio.required'  => 'El precio debe tener un valor.',
+            'precio.numeric'   => 'El precio debe ser un valor numérico.',
+            'horas.required'   => 'Las horas deben tener un valor.',
+            'horas.numeric'    => 'Las horas deben ser un valor numérico.',
         ]);
 
         
@@ -123,8 +122,6 @@ class InventarioController extends Controller
             'plan' => Plan::findOrFail($id),
         ]);
     }
-
-
 
     public function destroy(int $id)
     {

@@ -115,7 +115,6 @@
                 </div>
             </div>
         </section>
-
     </div>
         <section class="parallax-section d-flex align-items-center text-white text-center">
             <div class="parallax-overlay"></div>
@@ -139,7 +138,5 @@
                 </div>
             </div>
         </section>
-
-
 </x-layouts.guest>
 @endguest

@@ -25,6 +25,7 @@
         <button type="submit" class="btn btn-danger">Eliminar</button>
         <a href="{{ route('abm.planes.servicios') }}" class="btn btn-secondary">Cancelar</a>
     </form>
+    
 </x-layouts.main>
 
 

@@ -15,6 +15,10 @@ class NovedadesController extends Controller
 
     public function show($id)
     {
+        if (!ctype_digit($id)) {
+            abort(404, "El ID proporcionado no es válido.");
+        }
+
         $novedad = Novedad::findOrFail($id);
         return view('novedades.ver', ['novedad' => $novedad]);
     }
@@ -28,9 +32,9 @@ class NovedadesController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo' => 'required|min:2',
+            'titulo'    => 'required|min:2',
             'contenido' => 'required|min:5',
-            'imagen' => 'nullable|string',
+            'imagen'    => 'nullable|string',
         ]);
 
         $data = $request->only(['titulo', 'contenido', 'imagen']);
@@ -38,7 +42,7 @@ class NovedadesController extends Controller
         $novedad = Novedad::create($data);
         
         return redirect()
-            ->route('abm.novedades.ver', ['id' => $novedad->id])
+            ->route('abm.novedades', ['id' => $novedad->id])
             ->with('feedback.message', 'La novedad <b>' . e($data['titulo']) . '</b> se creó exitosamente.');
             
     }
@@ -53,9 +57,9 @@ class NovedadesController extends Controller
     public function update(Request $request, int $id)
     {
         $request->validate([
-            'titulo' => 'required|min:2',
+            'titulo'    => 'required|min:2',
             'contenido' => 'required|min:5',
-            'imagen' => 'nullable|string',
+            'imagen'    => 'nullable|string',
         ]);
 
         $novedad = Novedad::findOrFail($id);

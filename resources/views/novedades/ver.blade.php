@@ -28,12 +28,9 @@
         </div>
     </div>
 
-    <div class="text-center mt-4">
-        <a href="{{ route('abm.novedades') }}" class="btn btn-primary">
-            <i class="bi bi-arrow-left"></i> Volver al listado
-        </a>
+    <div class="text-center mt-4">        
+        <a href="{{ route('abm.novedades') }}" class="btn btn-secondary">Volver</a>
     </div>
-
 </x-layouts.main>
 
 

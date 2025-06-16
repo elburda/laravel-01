@@ -12,7 +12,6 @@
 <body class="d-flex flex-column min-vh-100" style="background-color: rgb(170, 201, 165);">
     <nav class="navbar navbar-expand-lg bg-dark bg-gradient">
         <div class="container-fluid">
-            {{-- <a class="navbar-brand text-warning" href="#">BitGuard</a> --}}
             <a class="navbar-brand warning text-warning d-flex align-items-center gap-2" href="#">
                 <img src="{{ asset('img/icons/logo.png') }}" alt="BitGuard Logo" width="32" height="32">
                 <span >BitGuard</span>
@@ -30,7 +29,7 @@
                         <x-nav-link url="/listado/planes-servicios" class="text-white">Planes/Servicios</x-nav-link>
                     </li>
                     <li class="nav-item">
-                        <x-nav-link url="/novedades" class="text-white">Novedades</x-nav-link>
+                        <x-nav-link url="/novedades/novedades-lista" class="text-white">Novedades</x-nav-link>
                     </li>
                     @auth
                         <li class="nav-item">

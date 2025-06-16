@@ -42,8 +42,12 @@
                 <li class="nav-item">
                     <x-nav-link url="/abm/novedades">ABM-Novedades</x-nav-link>
                 </li>
-
-
+                <li class="nav-item">
+                    <x-nav-link url="/users">Usuarios</x-nav-link>
+                </li>
+                <li class="nav-item">
+                    <x-nav-link url="{{ route('users.ver', ['user' => auth()->user()->id]) }}">Mi Perfil 👤</x-nav-link>
+                </li>
             </ul>
         </nav>
 

@@ -32,11 +32,8 @@
             </div>
         </div>
     </div>
-
-    <div class="text-center mt-4">
-        <a href="{{ route('planes-servicios') }}" class="btn btn-primary">
-            <i class="bi bi-arrow-left"></i> Volver al listado
-        </a>
+    <div class="d-flex justify-content-between mt-4">
+        <a href="{{ route('planes-servicios') }}" class="btn btn-secondary">Volver</a>
     </div>
 
 </x-layouts.guest>

@@ -110,7 +110,10 @@
                     <div class="text-danger" id="error_title">{{ $message }}</div>
                 @enderror
         </div>
-        <button type="submit" class="btn btn-primary">Actualizar</button>
+        <div class="d-flex justify-content-between mt-4">
+            <a href="{{ route('listados.index') }}" class="btn btn-secondary">Volver</a>
+            <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+        </div>
     </form>
 
         

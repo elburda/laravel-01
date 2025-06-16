@@ -9,32 +9,22 @@ class PublicNovedadesController extends Controller
 {
     public function index()
     {
-        // Listado de novedades accesible para todos
         $novedades = Novedad::all();
 
-        return view('user.novedades-index', [
+        return view('visitantes.novedades-index', [
             'novedades' => $novedades,
         ]);
     }
-
-    // public function show(int $id)
-    // {
-    //     // Vista ampliada de una novedad accesible para todos
-    //     $novedad = Novedad::findOrFail($id);
-
-    //     return view('user.novedades-ver', [
-    //         'novedad' => $novedad,
-    //     ]);
-    // }
-    public function show($id)
+    public function show(int $id)
     {
         if (!is_numeric($id)) {
             abort(404, "El ID proporcionado no es válido.");
         }
 
-        $novedad = Novedad::findOrFail($id);
-
-        return view('user.novedades-ver', ['novedad' => $novedad]);
+        return view('visitantes.novedades-ver', [
+            'novedad' => Novedad::findOrFail($id),
+        ]);
     }
+
 
 }

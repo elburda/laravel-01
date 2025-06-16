@@ -16,13 +16,13 @@ class AuthController extends Controller
     {
         // TODO VALIDACION
         $request->validate([
-            'email' => 'required|email',
+            'email'    => 'required|email',
             'password' => 'required',
         ], [
-            'email.required' => 'El email es obligatorio.',
-            'email.email' => 'El email debe ser válido.',
+            'email.required'    => 'El email es obligatorio.',
+            'email.email'       => 'El email debe ser válido.',
             'password.required' => 'La contraseña es obligatoria.',
-            'password.min' => 'La contraseña debe tener al menos :min caracteres.',
+            'password.min'      => 'La contraseña debe tener al menos :min caracteres.',
         ]);
         $credentials = $request->only(['email', 'password']);
     
@@ -42,8 +42,8 @@ class AuthController extends Controller
             ->route('auth.loginForm')
             ->withInput()
             ->with([
-                'feedback.message' => '¡Las credenciales ingresadas no coinciden con nuestros registros!',
-                'feedback.type' => 'danger'
+                'feedback.message'  => '¡Las credenciales ingresadas no coinciden con nuestros registros!',
+                'feedback.type'     => 'danger'
             ]);        
     }
 
@@ -60,8 +60,8 @@ class AuthController extends Controller
         return redirect()
             ->route('auth.loginForm')
             ->with([
-                'feedback.message' => 'La sesión se cerró correctamente. ¡Te esperamos pronto!',
-                'feedback.type' => 'success'
+                'feedback.message'  => 'La sesión se cerró correctamente. ¡Te esperamos pronto!',
+                'feedback.type'     => 'success'
         ]);
     }
 }

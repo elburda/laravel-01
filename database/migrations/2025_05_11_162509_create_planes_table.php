@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('planes', function (Blueprint $table) {
-            $table->id('plan_id');
-            $table->string('titulo', 100);
-            $table->unsignedInteger('precio');
-            $table->unsignedInteger('horas');
-            $table->text('resumen');
-            $table->string('foto')->nullable();
-            $table->string('foto_descripcion')->nullable();
+            $table->id                ('plan_id');
+            $table->string            ('titulo', 100);
+            $table->unsignedInteger   ('precio');
+            $table->unsignedInteger   ('horas');
+            $table->text              ('resumen');
+            $table->string            ('foto')             ->nullable();
+            $table->string            ('foto_descripcion') ->nullable();
 
 
             $table->timestamps();

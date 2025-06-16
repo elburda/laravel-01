@@ -12,10 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('planes', function (Blueprint $table) {
-            $table->unsignedTinyInteger('demanda_fk');
-
+            $table->unsignedTinyInteger  ('demanda_fk');
             
-            $table->foreign('demanda_fk')->references('demanda_id')->on('demandas');
+            $table  ->foreign              ('demanda_fk')
+                    ->references           ('demanda_id')
+                    ->on                   ('demandas');
         });
     }
 
@@ -25,7 +26,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('planes', function (Blueprint $table) {
-            $table->dropColumn('demanda_fk');
+            $table->dropForeign   (['demanda_fk']);
+            $table->dropColumn    ('demanda_fk');
         });
     }
+
 };

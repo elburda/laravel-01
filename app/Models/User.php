@@ -18,11 +18,23 @@ class User extends Authenticatable
      * @var list<string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
+        'name', 'email', 'password', 'role',
+        'equipo', 'rustdesk', 'sistema_operativo',
+        'procesador', 'tipo_memoria', 'capacidad_memoria',
+        'tipo_disco', 'capacidad_disco',
+        'ip_pc', 'ip_tel', 'notas', 'interno'
     ];
 
+
+    public function isAdmin()
+    {
+        return $this->role === 'admin';
+    }
+    
+    public function canViewABM()
+    {
+        return in_array($this->role, ['admin', 'usuario']);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

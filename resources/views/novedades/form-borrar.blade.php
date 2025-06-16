@@ -21,7 +21,7 @@
     </dl>
     <hr>
 
-    <form action="{{ route('novedades.destroy', ['id' => $novedad->id]) }}" method="post">
+    <form action="{{ route('abm.novedades.destroy', ['id' => $novedad->id]) }}" method="post">
         @csrf
         <button type="submit" class="btn btn-danger">Eliminar</button>
         <a href="{{ route('abm.novedades') }}" class="btn btn-secondary">Cancelar</a>

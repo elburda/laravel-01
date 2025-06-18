@@ -12,10 +12,10 @@
                 <p class="card-text">{{ $novedad->contenido }}</p>
 
                 <dl class="row mb-0">
-                    <dt class="col-sm-4">📅 Fecha de Publicación</dt>
+                    <dt class="col-sm-4">Fecha de Publicación </dt>
                     <dd class="col-sm-8">{{ $novedad->created_at->format('d/m/Y') }}</dd>
 
-                    <dt class="col-sm-4">📸 Imagen</dt>
+                    <dt class="col-sm-4">Imagen </dt>
                     <dd class="col-sm-8">
                         @if ($novedad->imagen)
                             <img src="{{ asset($novedad->imagen) }}" alt="Imagen de la novedad" class="img-fluid rounded">

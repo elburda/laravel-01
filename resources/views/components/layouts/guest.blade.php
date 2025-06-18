@@ -26,7 +26,7 @@
                         <x-nav-link url="/" class="text-white">Home</x-nav-link>
                     </li>
                     <li class="nav-item">
-                        <x-nav-link url="/listado/planes-servicios" class="text-white">Planes/Servicios</x-nav-link>
+                        <x-nav-link url="/listado/planes-servicios" class="text-white">Planes</x-nav-link>
                     </li>
                     <li class="nav-item">
                         <x-nav-link url="/novedades/novedades-lista" class="text-white">Novedades</x-nav-link>
@@ -64,11 +64,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 mb-3">
-                            <h5>BitGuard</h5>
+                            <h3>BitGuard</h3>
                             <p>Protegemos lo que más valorás con tecnología y experiencia.</p>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <h5>Contacto</h5>
+                            <h3>Contacto</h3>
                             <ul class="list-unstyled">
                                 <li>Trabajo Practico: Comercio Electronico</li>
                                 <li>Integrantes: Dario Burda - Nicolas Burda</li>
@@ -78,7 +78,7 @@
                             </ul>
                         </div>
                         <div class="col-md-4 mb-3">
-                            <h5>Seguinos</h5>
+                            <h3>Seguinos</h3>
                             <div class="d-flex gap-3">
                                 <a href="#" class="text-white" aria-label="Github">
                                     <img src="{{ asset('img/icons/github.png') }}" alt="Github" width="32" height="32">

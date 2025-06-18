@@ -11,7 +11,6 @@
     <h1>Eliminar Plan o Servicio</h1>
 
     <p>Estás a punto de eliminar el plan <b>{{ $plan->titulo }}</b>. Esta acción no se puede deshacer.</p>
-
     <dl>
         <dt>Resumen</dt>
         <dd>{{ $plan->resumen }}</dd>

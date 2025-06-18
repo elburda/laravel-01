@@ -3,7 +3,7 @@
 ?>
 
 <x-layouts.main>
-    <h1 class="mb-4">Servicios</h1>
+    <h1 class="mb-4">Planes</h1>
 
     @if(auth()->check() && auth()->user()->isAdmin())
     <div class="mb-4">
@@ -21,7 +21,7 @@
                     <th>Precio</th>
                     <th>Horas</th>
                     <th>Demanda</th>
-                    @if(auth()->check() && auth()->user()->isAdmin()) <!-- ✅ Solo admins pueden ver acciones -->
+                    @if(auth()->check() && auth()->user()->isAdmin())
                         <th>Acción</th>
                     @endif
                 </tr>
@@ -31,10 +31,12 @@
                 <tr>
                     <td>{{ $plan->titulo }}</td>
                     <td>{{ $plan->resumen }}</td>
-                    <td>$ {{ $plan->precio }}</td>
+                    <td class="text-center">
+                        <span style="white-space: nowrap;">$ {{ $plan->precio }}</span>
+                    </td>
                     <td class="text-center">{{ $plan->horas }}</td>
-                    <td class="text-center">{{ $plan->demanda->abbreviation }}</td>
-                    @if(auth()->check() && auth()->user()->isAdmin()) <!-- ✅ Solo admins pueden ver esto -->
+                    <td class="text-center">{{ $plan->demanda->name }}</td>
+                    @if(auth()->check() && auth()->user()->isAdmin())
                     <td>
                         <div class="d-grid gap-1">
                             <a href="{{ route('inventario.ver', ['id' => $plan->plan_id]) }}" class="btn btn-primary btn-sm w-100">Ver</a>

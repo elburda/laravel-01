@@ -1,7 +1,7 @@
 <x-layouts.guest>
-    <x-slot:title>Planes y Servicios</x-slot:title>
+    <x-slot:title>Planes</x-slot:title>
 
-    <h1 class="mb-4">Planes y Servicios</h1>
+    <h1 class="mb-4">Planes</h1>
 
     @auth
     <div class="mb-4">
@@ -25,8 +25,8 @@
                         {{ \Illuminate\Support\Str::limit($plan->resumen, 100) }}
                     </p>
                     <ul class="list-unstyled mb-4">
-                        <li><i class="bi bi-currency-dollar"></i> <strong>Precio:</strong> ${{ $plan->precio }}</li>
-                        <li><i class="bi bi-clock"></i> <strong>Horas:</strong> {{ $plan->horas }}</li>
+                        <li><i class="bi bi-currency-dollar"></i> <strong>Precio: </strong> ${{ $plan->precio }}</li>
+                        <li><i class="bi bi-clock"></i> <strong>Horas: </strong> {{ $plan->horas }}</li>
                     </ul>
                 </div>
 

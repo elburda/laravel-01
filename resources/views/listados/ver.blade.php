@@ -19,13 +19,13 @@
                 <p class="card-text">{{ $plan->resumen }}</p>
 
                 <dl class="row mb-0">
-                    <dt class="col-sm-4">💲 Precio</dt>
+                    <dt class="col-sm-4">Precio</dt>
                     <dd class="col-sm-8">$ {{ $plan->precio }}</dd>
 
-                    <dt class="col-sm-4">⏱️ Cantidad de Horas</dt>
+                    <dt class="col-sm-4">⏱Cantidad de Horas</dt>
                     <dd class="col-sm-8">{{ $plan->horas }}</dd>
 
-                    <dt class="col-sm-4">📊 Demanda</dt>
+                    <dt class="col-sm-4">Demanda</dt>
                     <dd class="col-sm-8">({{ $plan->demanda->abbreviation }}) {{ $plan->demanda->name }}</dd>
                 </dl>
             </div>

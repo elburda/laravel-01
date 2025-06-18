@@ -1,7 +1,7 @@
 <x-layouts.main>
-    <x-slot:title>Publicar Plan o Servicio</x-slot:title>
+    <x-slot:title>Publicar Planes</x-slot:title>
 
-    <h1>Publicar Plan o Servicio</h1>
+    <h1>Publicar Planes</h1>
 
     @if ($errors->any())
         <div class="text-danger mb-3">Por favor, revisá el formulario para continuar.</div>

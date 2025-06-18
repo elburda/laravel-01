@@ -37,7 +37,7 @@
         </table>
     </div>
     @else
-        <p>No hay ninguna novedad publicada.</p>
+        <p>No hay ninguna novedad publicada. </p>
     @endif
 
 </x-layouts.guest>
